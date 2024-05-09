@@ -160,7 +160,8 @@ function finalizarCompra() {
                   'success'
               );
               //Limpio el carrito luego de la compra.
-              carrito.limpiarCarrito();
+              carrito.articulos = [];
+              carrito.guardarCarrito();
           }
       });
   } else {
