@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrega Final Javascript Flex CoderHouse</title>
+    <link rel="stylesheet" href="./assets/CSS/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#seccion1">Celulares</a></li>
+            <li><a href="#seccion2">Laptops</a></li>
+            <li><a href="#seccion3">Artículos Varios</a></li>
+            <li id="carrito-li">
+                <div class="cart-container">
+                    <img class="cart-img" src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="Carrito de Compras">
+                    <div class="cart-info">
+                        <p id="cantidadArticulos">Artículos: 0</p>
+                        <p id="totalCarrito">Total: $0</p>
+                    </div>
+                    <a href="#seccionCarrito" class="button view-cart">Ver Carrito</a>
+                    <button id="boton-limpiar-carrito"  class="button clear-cart">Limpiar Carrito</button>
+                    <button id="boton-finalizar-compra" class="button finalize-purchase">Finalizar Compra</button>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <section id="inicio">
+        <h1>Proyecto Final: Tienda de Electronica y Gadgets</h1>
+    </section>
+    <section id="seccion1" class="product-section">
+        <h2>Celulares</h2>
+        <div class="card-container"></div>
+    </section>
+    <section id="seccion2" class="product-section">
+        <h2>Laptops</h2>
+        <div class="card-container"></div>
+    </section>
+    <section id="seccion3" class="product-section">
+        <h2>Artículos Varios</h2>
+        <div class="card-container"></div>
+    </section>
+    <section id="seccionCarrito" class="product-section">
+        <h2>Carrito de Compras</h2>
+        <div class="card-container"></div>
+    </section>
+</body>
+</html>
