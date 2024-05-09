@@ -102,11 +102,20 @@ document.addEventListener('DOMContentLoaded', ()=> {
   document.querySelector("#boton-finalizar-compra").addEventListener('click', finalizarCompra);
 });
 
-function cargarProductos(url, seccionId) {
+ async function cargarProductos(url, seccionId) {
     //Traigo los datos y genero las cards de los productos con la data obtenida para seccion.
-  fetch(url)
-      .then(response => response.json())
-      .then(data => generarCards(data.products, seccionId));
+    try{
+        const response = await fetch(url);
+        if(!response.ok){
+            throw new Error(`Tenemos un error con la obtencion de los datos: ${response.status}`);
+        } 
+        const data = await response.json();
+        generarCards(data.products, seccionId);
+    }
+    catch(error){
+        console.error("Error al cargar los productos :",error);
+    }
+
 }
 
 function generarCards(productos, seccionId) {
